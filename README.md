@@ -6,16 +6,19 @@
 
 **Tic-Tac-Toe, reinvented.**
 
-Play the oldest game in the world against an opponent that cannot be beaten
-or against a friend anywhere in the world,using a five-letter room code.
-
-**[▶ Play it now](https://gridlock-tic-tac-toe.streamlit.app/)**-no installation
+Play the oldest game in the world against an opponent that cannot be beaten,
+or against a friend anywhere in the world, using a five-letter room code.
 
 [![Play now](https://img.shields.io/badge/▶_play_now-live_demo-25f4ee?style=for-the-badge)](https://gridlock-tic-tac-toe.streamlit.app/)
+
 [![Python](https://img.shields.io/badge/python-3.10%2B-25f4ee)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/built%20with-streamlit-ff4d94)](https://streamlit.io/)
 [![Tests](https://img.shields.io/badge/tests-77%20passing-b6ff3b)](#is-it-actually-tested)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
+
+### [gridlock-tic-tac-toe.streamlit.app](https://gridlock-tic-tac-toe.streamlit.app/)
+
+No download. No sign-up. Open the link and play.
 
 </div>
 
@@ -23,40 +26,67 @@ or against a friend anywhere in the world,using a five-letter room code.
 
 ## What is this?
 
-Tic-tac-toe is a game most people stop playing at about age seven,because once
+Tic-tac-toe is a game most people stop playing at about age seven, because once
 you know the trick, nobody ever wins again.
 
-GRIDLOCK takes that fact seriously and builds a whole game around it. You can
-play against a computer opponent set to four levels of skill the hardest of
+GRIDLOCK takes that fact seriously and builds a whole game around it. You play
+against a computer opponent set to one of four skill levels, the hardest of
 which has never lost a game and never will. You can play a friend sitting next
 to you, or a friend on the other side of the country. You can make the board
-bigger. You can put a clock on it. And every game you play is remembered:
-your record, your best winning streak, your badges, and a replay of every match.
+bigger. You can put a clock on it. And every game you play is remembered: your
+record, your best winning streak, your badges, and a replay of every match.
 
-It runs in a web browser. There is nothing to install for players you just
-open a link.
+It runs in a web browser, on a phone as easily as on a computer. There is
+nothing for players to install.
 
 ---
 
 ## Table of contents
 
-**For everyone**
+**Playing**
+- [Start playing in 10 seconds](#start-playing-in-10-seconds)
 - [What can you do in it?](#what-can-you-do-in-it)
-- [How to run it on your own computer](#how-to-run-it-on-your-own-computer)
+- [Playing a friend, anywhere](#playing-a-friend-anywhere)
 - [Guest or account?](#guest-or-account)
-- [Playing with a friend](#playing-with-a-friend)
-- [Changing how it looks](#changing-how-it-looks)
+- [Playing on a phone](#playing-on-a-phone)
 
-**For anyone deploying or developing it**
-- [Putting it online](#putting-it-online)
+**Running your own copy**
+- [Run it on your own computer](#run-it-on-your-own-computer)
+- [Changing how it looks](#changing-how-it-looks)
+- [Putting your copy online](#putting-your-copy-online)
 - [Connecting a database](#connecting-a-database)
 - [Settings you can change](#settings-you-can-change)
+
+**How it works**
 - [What's in each file](#whats-in-each-file)
 - [How the computer opponent works](#how-the-computer-opponent-works)
 - [How online games work](#how-online-games-work)
 - [Is it actually tested?](#is-it-actually-tested)
 - [Ideas for later](#ideas-for-later)
 - [Licence](#licence)
+
+---
+
+## Start playing in 10 seconds
+
+1. Open **[gridlock-tic-tac-toe.streamlit.app](https://gridlock-tic-tac-toe.streamlit.app/)**
+2. Click **Play**
+3. Choose a difficulty and take the first square
+
+That is genuinely all of it. You are playing as a guest, which needs no email,
+no password and no setup.
+
+Two things to try once you are in:
+
+- Set the difficulty to **Impossible** and try to win. You cannot. Forcing a
+  draw is the real victory, and it takes some doing.
+- Open **Online**, click **Create room**, and send the five-letter code to a
+  friend. They open the same link, type the code, and you are playing each
+  other in real time.
+
+> The demo runs on a free host, so if nobody has used it for a while the first
+> page load can take twenty or thirty seconds while it wakes up. After that it
+> is instant.
 
 ---
 
@@ -80,14 +110,14 @@ open a link.
 | **Impossible** | Plays perfectly. The best you can do is force a draw. |
 
 That last claim is not marketing. It is checked automatically every time the
-code changes see [Is it actually tested?](#is-it-actually-tested)
+code changes: see [Is it actually tested?](#is-it-actually-tested)
 
 ### Change the game itself
 
-- **Board size**-the usual 3×3, or 4×4 and 5×5 where you need four in a row
-- **Timed mode**-a countdown on every move; run out and you forfeit the turn
-- **Undo**-take a move back when playing the computer
-- **Swap sides**,restart,resign,reset the score
+- **Board size** - the usual 3×3, or 4×4 and 5×5 where you need four in a row
+- **Timed mode** - a countdown on every move; run out and you forfeit the turn
+- **Undo** - take a move back when playing the computer
+- **Swap sides**, restart, resign, reset the score
 
 ### Keep a record
 
@@ -95,7 +125,7 @@ code changes see [Is it actually tested?](#is-it-actually-tested)
 - Charts of how you have been doing recently
 - **Badges** for 12 different achievements
 - A **daily challenge** that changes every day
-- **Replays** - step through any past game move by move
+- **Replays**-step through any past game move by move
 - Download your entire history as a spreadsheet file
 
 ### Make it yours
@@ -103,11 +133,82 @@ code changes see [Is it actually tested?](#is-it-actually-tested)
 - Six colour schemes: Neon, Dark, Light, Retro, Minimal and Cyberpunk
 - Choose a display name and an avatar
 - Turn sounds and animations on or off
-- Works on a phone as well as a computer
 
 ---
 
-## How to run it on your own computer
+## Playing a friend, anywhere
+
+1. One of you opens **Online** and clicks **Create room**
+2. A five-letter code appears, something like `AB92K`. Send it to your friend
+3. They open the same website, go to **Online**, type the code, and click
+   **Join room**
+4. Play
+
+Whoever created the room goes first as X. The board updates by itself every
+couple of seconds, so neither of you needs to refresh anything.
+
+While you play you can send chat messages, tap emoji reactions, ask for a
+rematch, or resign. If a third person joins a room that is already full, they
+become a **spectator**: they watch the game live and can chat, but cannot move.
+
+**If you lose connection, nothing is lost.** Close the tab, run out of battery,
+walk into a lift-rejoin with the same code and the game is exactly where you
+left it. Rooms nobody has touched for a while are cleared away automatically.
+
+You can also share a room with a direct link by adding the code to the address:
+`gridlock-tic-tac-toe.streamlit.app/?room=AB92K` drops your friend straight in.
+
+---
+
+## Guest or account?
+
+**As a guest**, you can play everything immediately. The catch is that your
+history lives in that browser session. Refresh the page and you are a new
+player with an empty record.
+
+**With an account**, your record follows you: the same stats on your laptop and
+your phone, still there next week. You need an email address and a password of
+at least eight characters.
+
+To create one on the live demo: **Settings → Account → Create account**. It
+takes about fifteen seconds and there is nothing to confirm or install.
+
+Once signed in, everything you do is filed under that account — every game,
+badge and streak — and signing in from any other device brings it all with you.
+
+> **A note on your password.** It is never stored by this app and never passes
+> through its code. It goes straight to the authentication service, which keeps
+> only a scrambled version that cannot be turned back into your password by
+> anyone, including whoever runs the app.
+
+If you are running your own copy of GRIDLOCK, accounts need a database
+connected first-see [Connecting a database](#connecting-a-database). Guest
+play always works, with or without one.
+
+---
+
+## Playing on a phone
+
+The whole app is built to work at phone width: the board scales, the sidebar
+tucks away behind the arrow at the top left, and the buttons are sized for
+thumbs.
+
+Two tips:
+
+- **Add it to your home screen** from your browser's share menu, and it opens
+  like an app, without the address bar.
+- **Sign in** if you want the same record on your phone and your computer.
+  Otherwise the two are treated as different players.
+
+If you are playing a friend, both of you can be on phones. Nothing about the
+online mode assumes a computer.
+
+---
+
+## Run it on your own computer
+
+Only needed if you want to change the code or run your own copy. To simply play,
+use the [live version](https://gridlock-tic-tac-toe.streamlit.app/).
 
 You need **Python** version 3.10 or newer. If you are not sure whether you have
 it, open a terminal and type `python3 --version`.
@@ -145,84 +246,38 @@ python -m streamlit run app.py
 ```
 
 Your browser opens automatically. If it does not, go to <http://localhost:8501>.
-
 To stop the app, press `Ctrl+C` in the terminal.
 
 > **You do not need to set anything up.** No accounts, no database, no
 > configuration. The app quietly keeps your games in a file inside the project
-> folder. Everything works from the first run.
-
----
-
-## Guest or account?
-
-**As a guest**, you can play everything immediately. The catch is that your
-history lives in that browser session refresh the page and you are a new
-player with an empty record.
-
-**With an account** (Settings → Account → Create account), your record follows
-you: same stats on your laptop and your phone, still there next week. You need
-an email address and a password of at least eight characters.
-
-Accounts require a database to be connected — see
-[Connecting a database](#connecting-a-database). Without one, guest play still
-works perfectly.
-
-Your password is never stored by this app and never passes through its code. It
-goes straight to the authentication service, which stores only a scrambled
-version that cannot be turned back into your password by anyone, including you.
-
----
-
-## Playing with a friend
-
-1. One of you opens **Online**, clicks **Create room**, and reads out the
-   five-letter code that appears-something like `AB92K`
-2. The other opens **Online**, types the code, and clicks **Join room**
-3. Play
-
-Whoever created the room goes first as X. The board updates by itself every
-couple of seconds, so neither of you needs to refresh anything.
-
-While you play you can send chat messages, tap emoji reactions, ask for a
-rematch, or resign. If a third person joins a room that is already full, they
-become a **spectator** they watch the game and can chat, but cannot move.
-
-If you lose connection, nothing is lost. Rejoin with the same code and your game
-is exactly where you left it. Rooms nobody has touched for a while are cleared
-away automatically.
-
-> **One thing to know:** for two *different* computers to play each other, the
-> app needs a shared database see the next section. Without one, online rooms
-> only work between browser tabs on the same machine, which is still useful for
-> testing.
+> folder, and everything works from the first run.
 
 ---
 
 ## Changing how it looks
 
-You do not need to touch any code to change the colours there is a theme
+You do not need to touch any code to change the colours: there is a theme
 picker in the sidebar and in Settings.
 
 If you want to go further, everything visual comes from two files:
 
 | To change | Open | Look for |
 | --- | --- | --- |
-| The colours themselves | `config.py` | `THEMES` - six palettes written as colour codes |
-| Lock the app to one colour scheme | `config.py` | `LOCKED_THEME` - set it to a theme name to hide the picker |
+| The colours themselves | `config.py` | `THEMES` — six palettes written as colour codes |
+| Lock the app to one colour scheme | `config.py` | `LOCKED_THEME` — set it to a theme name to hide the picker |
 | The wording on the home page | `app.py` | `page_home` |
 | The app's tagline | `config.py` | `APP_TAGLINE` |
 | Spacing, layout, animations | `styles.py` | `base_css` |
 
 Change a colour in `config.py`, restart the app, and it updates everywhere at
-once buttons, board, logo and all. Nothing has colours written into it twice.
+once: buttons, board, logo and all. Nothing has colours written into it twice.
 
 ---
 
-## Putting it online
+## Putting your copy online
 
-Two steps: put the code on GitHub, then point a hosting service at it. Both are
-free.
+Two steps, both free: put the code on GitHub, then point a hosting service at
+it.
 
 ### Step 1-GitHub
 
@@ -255,7 +310,7 @@ You get a public web address you can share with anyone.
 
 **Other options** are included if you prefer them: `render.yaml` for
 [Render](https://render.com), and a `Dockerfile` for anywhere that runs
-containers. Both are ready to use as they are.
+containers. Both work as they are.
 
 ---
 
@@ -272,12 +327,12 @@ has a free tier that is more than enough.
 
 2. **Set up the tables.** In the left sidebar, click **SQL Editor** → **New
    snippet**. Open each of these files from the `supabase/migrations` folder,
-   copy the contents, paste, and click **Run** — in this order:
+   copy the contents, paste, and click **Run**, in this order:
 
    ```
-   0001_init.sql                    creates the tables
+   0001_init.sql                       creates the tables
    0002_realtime_and_maintenance.sql   adds live updates and cleanup
-   0003_data_api_grants.sql         gives the app permission to use them
+   0003_data_api_grants.sql            gives the app permission to use them
    ```
 
    Each should report success. Click **Table Editor** afterwards and you should
@@ -292,7 +347,7 @@ has a free tier that is more than enough.
    SUPABASE_KEY=sb_publishable_your_key_here
    ```
 
-4. **Restart the app.** Go to **Settings → Diagnostics** — it should now say
+4. **Restart the app.** Go to **Settings → Diagnostics**: it should now say
    `supabase` rather than `sqlite`.
 
 > **Use the publishable key, never the secret one.** The publishable key is
@@ -303,7 +358,7 @@ has a free tier that is more than enough.
 > **A note on privacy.** The database is deliberately open to anonymous
 > players, because that is what lets people play without signing up. Game
 > results, display names and chat messages are readable by the app's key. Email
-> addresses and passwords are not-those are held separately by the
+> addresses and passwords are not: those are held separately by the
 > authentication service. This is a reasonable trade for a game; it would not be
 > for anything sensitive.
 
@@ -342,7 +397,7 @@ gridlock/
 ├── styles.py         The visual design
 ├── utils.py          Sounds, confetti, badges, exports
 │
-├── assets/           Logo, sound effects, icons — all generated from code
+├── assets/           Logo, sound effects, icons: all generated from code
 ├── supabase/         Database setup files
 ├── tests/            Automated checks
 ├── scripts/          Tool to rebuild the assets
@@ -353,7 +408,7 @@ gridlock/
 ```
 
 The design deliberately keeps the *game* separate from the *website*. `board.py`,
-`game.py`, `ai.py` and `player.py` know nothing about web pages they could be
+`game.py`, `ai.py` and `player.py` know nothing about web pages, so they could be
 lifted out and used in a phone app or a chat bot unchanged. Only `app.py`,
 `styles.py` and parts of `utils.py` deal with the browser.
 
@@ -369,8 +424,8 @@ that leads to the best guaranteed outcome no matter what you do.
 Tic-tac-toe is small enough that this can be done completely, which is why the
 result is a computer that genuinely cannot be beaten. The larger boards are too
 big to search exhaustively, so it searches as deep as it can within about a
-second and a half, using several standard techniques to search further in the
-same time.
+second and a half, using several standard techniques to get further in the same
+time.
 
 Two bugs found during development are worth recording, since both are easy to
 make and hard to notice:
@@ -394,7 +449,7 @@ Each room is one row in a table: the board, whose turn it is, both players, and
 when each was last seen.
 
 Your browser is only a display. Every move is sent to the database, checked
-there, and sent back so it does not matter what someone does to the page in
+there, and sent back, so it does not matter what someone does to the page in
 front of them. The rules are enforced where they cannot be edited:
 
 - You must be in the room
@@ -406,7 +461,7 @@ Two players clicking at the same instant cannot both succeed. Each move says
 "apply this only if the game is still on move seven"; the slower one fails and
 that player's board simply refreshes.
 
-The board updates by polling asking the database for changes every two seconds.
+The board updates by polling, asking the database for changes every two seconds.
 Network connections drop occasionally, especially on phones, so failed requests
 are retried automatically and a brief disconnection shows a quiet "Reconnecting…"
 message instead of an error.
@@ -415,7 +470,7 @@ message instead of an error.
 
 ## Is it actually tested?
 
-Yes-77 automated checks, run with `pytest`.
+Yes: 77 automated checks, run with `pytest`.
 
 | What is checked | How |
 | --- | --- |
@@ -427,7 +482,7 @@ Yes-77 automated checks, run with `pytest`.
 | The website itself | Every page loads, moves register, **and two separate sessions play a full online match against each other** |
 
 The last one matters most. Those tests run the actual application the way a
-browser would, so a broken button fails the test rather than surprising you
+browser would, so a broken button fails the test rather than surprising someone
 later.
 
 Run them yourself:
@@ -442,7 +497,7 @@ pytest
 ## Ideas for later
 
 - **Instant updates** instead of checking every two seconds
-- **Rankings**  a skill rating per player and matchmaking
+- **Rankings**-a skill rating per player, and matchmaking
 - **Tournaments** with brackets and a spectator lobby
 - **Merging guest history** into an account when you sign up
 - **Keyboard and screen-reader support** for the board
@@ -452,4 +507,4 @@ pytest
 
 ## Licence
 
-MIT-do what you like with it, including commercially.See [LICENSE](LICENSE).
+MIT: do what you like with it, including commercially. See [LICENSE](LICENSE).
