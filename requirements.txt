@@ -1,0 +1,18 @@
+# --- runtime ---------------------------------------------------------------
+streamlit>=1.40,<2.0
+pandas>=2.1
+supabase>=2.6,<3.0
+python-dotenv>=1.0
+
+# pyarrow is pulled in by Streamlit for tables and charts. Version 19 and
+# above ships wheels built with CPU instructions that older processors do not
+# implement, which kills the process with "Illegal instruction" (SIGILL) the
+# moment a dataframe is rendered. Capping it costs nothing on modern hardware.
+pyarrow<18
+
+# --- assets (only needed to regenerate assets/logo.png) --------------------
+pillow>=10.3
+
+# --- development -----------------------------------------------------------
+# Install these with: pip install -r requirements-dev.txt
+# pytest>=8.0

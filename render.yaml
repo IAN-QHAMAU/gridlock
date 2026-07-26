@@ -1,0 +1,24 @@
+# Render blueprint. Push this repo, then: Render -> New -> Blueprint.
+services:
+  - type: web
+    name: gridlock
+    runtime: python
+    plan: free
+    pythonVersion: "3.12"
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true
+    healthCheckPath: /_stcore/health
+    autoDeploy: true
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
+      - key: ENABLE_GOOGLE_AUTH
+        value: "false"
+      - key: OAUTH_REDIRECT_URL
+        sync: false
+      - key: LOG_LEVEL
+        value: INFO
+      - key: TTT_DATA_DIR
+        value: /tmp/gridlock

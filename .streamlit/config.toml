@@ -1,0 +1,22 @@
+# Streamlit configuration. The in-app theme selector restyles everything on top
+# of this; these values only set the first paint and the chrome colours.
+
+[theme]
+base = "dark"
+primaryColor = "#25f4ee"
+backgroundColor = "#05060b"
+secondaryBackgroundColor = "#0f1524"
+textColor = "#e8f4ff"
+font = "sans serif"
+
+[server]
+headless = true
+enableXsrfProtection = true
+maxUploadSize = 5
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"
+showErrorDetails = true
