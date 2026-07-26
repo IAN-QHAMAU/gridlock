@@ -6,8 +6,8 @@
 
 **Tic-Tac-Toe, reinvented.**
 
-Play the oldest game in the world against an opponent that cannot be beaten —
-or against a friend anywhere in the world, using a five-letter room code.
+Play the oldest game in the world against an opponent that cannot be beaten
+or against a friend anywhere in the world,using a five-letter room code.
 
 [![Python](https://img.shields.io/badge/python-3.10%2B-25f4ee)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/built%20with-streamlit-ff4d94)](https://streamlit.io/)
@@ -20,17 +20,17 @@ or against a friend anywhere in the world, using a five-letter room code.
 
 ## What is this?
 
-Tic-tac-toe is a game most people stop playing at about age seven, because once
+Tic-tac-toe is a game most people stop playing at about age seven,because once
 you know the trick, nobody ever wins again.
 
 GRIDLOCK takes that fact seriously and builds a whole game around it. You can
-play against a computer opponent set to four levels of skill — the hardest of
+play against a computer opponent set to four levels of skill the hardest of
 which has never lost a game and never will. You can play a friend sitting next
 to you, or a friend on the other side of the country. You can make the board
 bigger. You can put a clock on it. And every game you play is remembered:
 your record, your best winning streak, your badges, and a replay of every match.
 
-It runs in a web browser. There is nothing to install for players — you just
+It runs in a web browser. There is nothing to install for players you just
 open a link.
 
 ---
@@ -77,14 +77,14 @@ open a link.
 | **Impossible** | Plays perfectly. The best you can do is force a draw. |
 
 That last claim is not marketing. It is checked automatically every time the
-code changes — see [Is it actually tested?](#is-it-actually-tested)
+code changes see [Is it actually tested?](#is-it-actually-tested)
 
 ### Change the game itself
 
-- **Board size** — the usual 3×3, or 4×4 and 5×5 where you need four in a row
-- **Timed mode** — a countdown on every move; run out and you forfeit the turn
-- **Undo** — take a move back when playing the computer
-- **Swap sides**, restart, resign, reset the score
+- **Board size**-the usual 3×3, or 4×4 and 5×5 where you need four in a row
+- **Timed mode**-a countdown on every move; run out and you forfeit the turn
+- **Undo**-take a move back when playing the computer
+- **Swap sides**,restart,resign,reset the score
 
 ### Keep a record
 
@@ -92,7 +92,7 @@ code changes — see [Is it actually tested?](#is-it-actually-tested)
 - Charts of how you have been doing recently
 - **Badges** for 12 different achievements
 - A **daily challenge** that changes every day
-- **Replays** — step through any past game move by move
+- **Replays** - step through any past game move by move
 - Download your entire history as a spreadsheet file
 
 ### Make it yours
@@ -154,7 +154,7 @@ To stop the app, press `Ctrl+C` in the terminal.
 ## Guest or account?
 
 **As a guest**, you can play everything immediately. The catch is that your
-history lives in that browser session — refresh the page and you are a new
+history lives in that browser session refresh the page and you are a new
 player with an empty record.
 
 **With an account** (Settings → Account → Create account), your record follows
@@ -174,7 +174,7 @@ version that cannot be turned back into your password by anyone, including you.
 ## Playing with a friend
 
 1. One of you opens **Online**, clicks **Create room**, and reads out the
-   five-letter code that appears — something like `AB92K`
+   five-letter code that appears-something like `AB92K`
 2. The other opens **Online**, types the code, and clicks **Join room**
 3. Play
 
@@ -183,14 +183,14 @@ couple of seconds, so neither of you needs to refresh anything.
 
 While you play you can send chat messages, tap emoji reactions, ask for a
 rematch, or resign. If a third person joins a room that is already full, they
-become a **spectator** — they watch the game and can chat, but cannot move.
+become a **spectator** they watch the game and can chat, but cannot move.
 
 If you lose connection, nothing is lost. Rejoin with the same code and your game
 is exactly where you left it. Rooms nobody has touched for a while are cleared
 away automatically.
 
 > **One thing to know:** for two *different* computers to play each other, the
-> app needs a shared database — see the next section. Without one, online rooms
+> app needs a shared database see the next section. Without one, online rooms
 > only work between browser tabs on the same machine, which is still useful for
 > testing.
 
@@ -198,21 +198,21 @@ away automatically.
 
 ## Changing how it looks
 
-You do not need to touch any code to change the colours — there is a theme
+You do not need to touch any code to change the colours there is a theme
 picker in the sidebar and in Settings.
 
 If you want to go further, everything visual comes from two files:
 
 | To change | Open | Look for |
 | --- | --- | --- |
-| The colours themselves | `config.py` | `THEMES` — six palettes written as colour codes |
-| Lock the app to one colour scheme | `config.py` | `LOCKED_THEME` — set it to a theme name to hide the picker |
+| The colours themselves | `config.py` | `THEMES` - six palettes written as colour codes |
+| Lock the app to one colour scheme | `config.py` | `LOCKED_THEME` - set it to a theme name to hide the picker |
 | The wording on the home page | `app.py` | `page_home` |
 | The app's tagline | `config.py` | `APP_TAGLINE` |
 | Spacing, layout, animations | `styles.py` | `base_css` |
 
 Change a colour in `config.py`, restart the app, and it updates everywhere at
-once — buttons, board, logo and all. Nothing has colours written into it twice.
+once buttons, board, logo and all. Nothing has colours written into it twice.
 
 ---
 
@@ -221,7 +221,7 @@ once — buttons, board, logo and all. Nothing has colours written into it twice
 Two steps: put the code on GitHub, then point a hosting service at it. Both are
 free.
 
-### Step 1 — GitHub
+### Step 1-GitHub
 
 Make the folder containing `app.py` the top level of your repository. Before
 your first push, check that no private files are included:
@@ -233,7 +233,7 @@ git status --short | grep -E "\.env$|secrets\.toml|data/"
 That should print **nothing**. The `.gitignore` file already excludes your
 private settings, your database and your virtual environment.
 
-### Step 2 — Streamlit Community Cloud
+### Step 2-Streamlit Community Cloud
 
 1. Go to [share.streamlit.io](https://share.streamlit.io) and sign in with GitHub
 2. Click **Create app** and choose your repository, the `main` branch, and
@@ -300,7 +300,7 @@ has a free tier that is more than enough.
 > **A note on privacy.** The database is deliberately open to anonymous
 > players, because that is what lets people play without signing up. Game
 > results, display names and chat messages are readable by the app's key. Email
-> addresses and passwords are not — those are held separately by the
+> addresses and passwords are not-those are held separately by the
 > authentication service. This is a reasonable trade for a game; it would not be
 > for anything sensitive.
 
@@ -350,7 +350,7 @@ gridlock/
 ```
 
 The design deliberately keeps the *game* separate from the *website*. `board.py`,
-`game.py`, `ai.py` and `player.py` know nothing about web pages — they could be
+`game.py`, `ai.py` and `player.py` know nothing about web pages they could be
 lifted out and used in a phone app or a chat bot unchanged. Only `app.py`,
 `styles.py` and parts of `utils.py` deal with the browser.
 
@@ -391,7 +391,7 @@ Each room is one row in a table: the board, whose turn it is, both players, and
 when each was last seen.
 
 Your browser is only a display. Every move is sent to the database, checked
-there, and sent back — so it does not matter what someone does to the page in
+there, and sent back so it does not matter what someone does to the page in
 front of them. The rules are enforced where they cannot be edited:
 
 - You must be in the room
@@ -403,7 +403,7 @@ Two players clicking at the same instant cannot both succeed. Each move says
 "apply this only if the game is still on move seven"; the slower one fails and
 that player's board simply refreshes.
 
-The board updates by polling — asking the database for changes every two seconds.
+The board updates by polling asking the database for changes every two seconds.
 Network connections drop occasionally, especially on phones, so failed requests
 are retried automatically and a brief disconnection shows a quiet "Reconnecting…"
 message instead of an error.
@@ -412,7 +412,7 @@ message instead of an error.
 
 ## Is it actually tested?
 
-Yes — 77 automated checks, run with `pytest`.
+Yes-77 automated checks, run with `pytest`.
 
 | What is checked | How |
 | --- | --- |
@@ -439,7 +439,7 @@ pytest
 ## Ideas for later
 
 - **Instant updates** instead of checking every two seconds
-- **Rankings** — a skill rating per player and matchmaking
+- **Rankings**  a skill rating per player and matchmaking
 - **Tournaments** with brackets and a spectator lobby
 - **Merging guest history** into an account when you sign up
 - **Keyboard and screen-reader support** for the board
@@ -449,4 +449,4 @@ pytest
 
 ## Licence
 
-MIT — do what you like with it, including commercially. See [LICENSE](LICENSE).
+MIT-do what you like with it, including commercially.See [LICENSE](LICENSE).
