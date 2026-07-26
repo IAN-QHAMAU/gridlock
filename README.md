@@ -173,7 +173,7 @@ at least eight characters.
 To create one on the live demo: **Settings → Account → Create account**. It
 takes about fifteen seconds and there is nothing to confirm or install.
 
-Once signed in, everything you do is filed under that account — every game,
+Once signed in, everything you do is filed under that account every game,
 badge and streak — and signing in from any other device brings it all with you.
 
 > **A note on your password.** It is never stored by this app and never passes
@@ -263,8 +263,8 @@ If you want to go further, everything visual comes from two files:
 
 | To change | Open | Look for |
 | --- | --- | --- |
-| The colours themselves | `config.py` | `THEMES` — six palettes written as colour codes |
-| Lock the app to one colour scheme | `config.py` | `LOCKED_THEME` — set it to a theme name to hide the picker |
+| The colours themselves | `config.py` | `THEMES` - six palettes written as colour codes |
+| Lock the app to one colour scheme | `config.py` | `LOCKED_THEME` - set it to a theme name to hide the picker |
 | The wording on the home page | `app.py` | `page_home` |
 | The app's tagline | `config.py` | `APP_TAGLINE` |
 | Spacing, layout, animations | `styles.py` | `base_css` |
